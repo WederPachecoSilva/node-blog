@@ -1,0 +1,16 @@
+{
+  "name": "node-blog",
+  "version": "1.0.0",
+  "description": "Simple blog app",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "author": "Wéder Pacheco",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.10.3",
+    "pug": "^2.0.0-rc.1"
+  }
+}
