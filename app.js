@@ -14,15 +14,19 @@ let indexRouter = require('./routes/index');
 const app = express();
 
 // Bring in article model
-let Article = require('./models/article');
+let Articles = require('./models/article');
 
 //Load view engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+
 // Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+// Set up public folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Setting routes
 app.use(indexRouter);
